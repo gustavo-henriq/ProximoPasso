@@ -29,40 +29,42 @@
     .hero-map{counter-reset:quicklink}.map-link{position:relative;display:flex;align-items:center}.map-link:before{counter-increment:quicklink;content:"0" counter(quicklink);flex:0 0 auto;font:700 .72rem Montserrat,sans-serif;color:#6a20a7;background:#f5eafb;border-radius:10px;padding:6px 7px}.map-link:nth-child(2):before{background:#eaf6fc;color:#0369a1}.map-link:nth-child(3):before{background:#fff5c8;color:#795515}.map-link:nth-child(4):before{background:#fce8f0;color:#9b3d67}.map-link:nth-child(5):before{background:#e5f7ec;color:#26704a}
     .hero-map .map-link{font-size:.72rem}.section-heading{position:relative;padding-top:5px}.section-heading h2{margin-top:10px}.section-heading p{max-width:610px}
     #nivel,#entrevista{background:rgba(253,244,255,.38)}#curriculo,#erros{background:rgba(223,241,254,.25)}
-    .stars{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:.76}.star{position:absolute;display:block;font-size:20px;opacity:0;animation:star-fall-right 11s linear infinite;text-shadow:0 1px 8px rgba(59,7,100,.24);will-change:transform,opacity;pointer-events:none}.star:after{content:"";position:absolute;left:50%;top:-32px;width:2px;height:36px;border-radius:2px;background:linear-gradient(to top,currentColor,transparent);transform:rotate(35deg);transform-origin:bottom center;opacity:.62}.star-glyph{display:inline-block;transform-origin:center;animation:star-spin 42s linear infinite;will-change:transform}.star:nth-child(even){animation-name:star-fall-left}
-    @keyframes star-fall-right{0%{transform:translate3d(0,-96px,0) scale(.72);opacity:0}7%{opacity:.95}72%{opacity:.95}82%{opacity:.65}94%{opacity:0}100%{transform:translate3d(38px,380px,0) scale(.82);opacity:0}}
-    @keyframes star-fall-left{0%{transform:translate3d(0,-96px,0) scale(.72);opacity:0}7%{opacity:.95}72%{opacity:.95}82%{opacity:.65}94%{opacity:0}100%{transform:translate3d(-38px,380px,0) scale(.82);opacity:0}}
+    .stars{position:absolute;inset:0;z-index:0;overflow:hidden;opacity:1}
+    .star{position:absolute;display:block;opacity:0;animation:star-fall-vertical 6s linear infinite!important;text-shadow:0 1px 8px rgba(59,7,100,.28);will-change:transform,opacity;pointer-events:none}
+    .star:after{content:"";position:absolute;left:50%;top:-52px;width:2px;height:54px;border-radius:2px;background:linear-gradient(to top,currentColor,transparent);transform:none!important;opacity:.9}
+    .star-glyph{display:inline-block;transform-origin:center;animation:star-spin 42s linear infinite;will-change:transform}
+    .stars>.star:nth-child(12n+1){left:3%!important;right:auto!important}.stars>.star:nth-child(12n+2){right:3%!important;left:auto!important}
+    .stars>.star:nth-child(12n+3){left:3.9%!important;right:auto!important}.stars>.star:nth-child(12n+4){right:3.9%!important;left:auto!important}
+    .stars>.star:nth-child(12n+5){left:4.8%!important;right:auto!important}.stars>.star:nth-child(12n+6){right:4.8%!important;left:auto!important}
+    .stars>.star:nth-child(12n+7){left:5.7%!important;right:auto!important}.stars>.star:nth-child(12n+8){right:5.7%!important;left:auto!important}
+    .stars>.star:nth-child(12n+9){left:6.6%!important;right:auto!important}.stars>.star:nth-child(12n+10){right:6.6%!important;left:auto!important}
+    .stars>.star:nth-child(12n+11){left:7.5%!important;right:auto!important}.stars>.star:nth-child(12n){right:7.5%!important;left:auto!important}
+    @keyframes star-fall-vertical{0%{transform:translate3d(0,-110px,0) scale(.78);opacity:0}8%{opacity:.98}64%{transform:translate3d(0,360px,0) scale(.9);opacity:.98}79%{transform:translate3d(0,470px,0) scale(.86);opacity:.7}91%{transform:translate3d(0,560px,0) scale(.8);opacity:.24}100%{transform:translate3d(0,630px,0) scale(.72);opacity:0}}
     @keyframes star-spin{to{transform:rotate(360deg)}}
-    .hero,.section,.closing{position:relative;z-index:auto}.shell{position:relative;z-index:2}.site-header{z-index:20}
+    .hero,.section,.closing{position:relative;z-index:auto}.shell{position:relative;z-index:auto}.site-header{z-index:20}
     @media(min-width:700px){.map-link{min-height:76px}.map-link:before{margin-bottom:9px}}
     @media(prefers-reduced-motion:reduce){.stars{display:none}}
-      /* Estrelas cadentes visíveis entre os cartões */
-    .stars{z-index:1;opacity:1}
-    .star{animation-duration:5.4s!important;text-shadow:0 1px 8px rgba(59,7,100,.28)}
-    .star:after{top:-40px;height:46px;opacity:.86}
-    .stars>.star:nth-child(6n+1){left:5px!important;right:auto!important}
-    .stars>.star:nth-child(6n+2){right:5px!important;left:auto!important}
-    .stars>.star:nth-child(6n+3){left:4%!important;right:auto!important}
-    .stars>.star:nth-child(6n+4){right:4%!important;left:auto!important}
-    .stars>.star:nth-child(6n+5){left:8%!important;right:auto!important}
-    .stars>.star:nth-child(6n){right:8%!important;left:auto!important}
-    @keyframes star-fall-right{0%{transform:translate3d(0,-130px,0) scale(.72);opacity:0}7%{opacity:.98}48%{opacity:.98}68%{opacity:.75}84%{opacity:.32}94%{opacity:0}100%{transform:translate3d(48px,440px,0) scale(.82);opacity:0}}
-    @keyframes star-fall-left{0%{transform:translate3d(0,-130px,0) scale(.72);opacity:0}7%{opacity:.98}48%{opacity:.98}68%{opacity:.75}84%{opacity:.32}94%{opacity:0}100%{transform:translate3d(-48px,440px,0) scale(.82);opacity:0}}
-    .shell{z-index:auto}
     .hero-card,.hero-map,.section-heading,.goal-grid,.after-goals,.two-col,.card,.goal-card,.interview-list,.closing-box,.final-card,.callout{position:relative;z-index:2}
-      /* Estrelas maiores e visíveis também nas laterais do celular */
-    @media(max-width:699px){.shell{width:calc(100% - 50px)}}
-    .star{font-size:26px!important;animation-duration:4.5s!important}
-    .star:after{top:-48px;height:55px;opacity:.92}
-    .stars>.star:nth-child(6n+1){left:1%!important;right:auto!important}
-    .stars>.star:nth-child(6n+2){right:1%!important;left:auto!important}
-    .stars>.star:nth-child(6n+3){left:2%!important;right:auto!important}
-    .stars>.star:nth-child(6n+4){right:2%!important;left:auto!important}
-    .stars>.star:nth-child(6n+5){left:3%!important;right:auto!important}
-    .stars>.star:nth-child(6n){right:3%!important;left:auto!important}
-      .hero-card{background:linear-gradient(118deg,rgba(253,244,255,.84),rgba(255,255,255,.82) 57%,rgba(234,246,252,.84))}
-    .goal-card{background:rgba(255,255,255,.82)!important}
-    .goal-card[aria-pressed="true"]{background:rgba(253,244,255,.88)!important}
+    @media(max-width:699px){.shell{width:calc(100% - 56px)}}
+    .hero-card{background:linear-gradient(118deg,rgba(253,244,255,.84),rgba(255,255,255,.82) 57%,rgba(234,246,252,.84))}
+    .goal-card{background:rgba(255,255,255,.82)!important}.goal-card[aria-pressed="true"]{background:rgba(253,244,255,.88)!important}
+      #quem-somos{background:rgba(253,244,255,.4)}
+    .creator-grid{display:grid;grid-template-columns:1fr;gap:16px}
+    .creator-card{position:relative;z-index:2;overflow:hidden;display:grid;grid-template-columns:1fr;border:1px solid #e9e0ed;border-radius:22px;background:#fff;box-shadow:0 9px 26px rgba(59,7,100,.065)}
+    .creator-card--mariana{border-color:#eed8ca}
+    .creator-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center top}
+    .creator-card--andy .creator-photo{background:#f5e5f7}
+    .creator-card--mariana .creator-photo{background:#c88765}
+    .creator-copy{padding:19px 20px 22px}
+    .creator-kicker{display:block;margin-bottom:7px;color:var(--purple);font:700 .68rem/1.4 Montserrat,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+    .creator-card--mariana .creator-kicker{color:#a95c3c}
+    .creator-copy h3{margin:0 0 8px;font:800 1.28rem Montserrat,sans-serif;letter-spacing:-.03em}
+    .creator-traits{margin:0 0 10px;color:#60456f;font:700 .72rem/1.5 Montserrat,sans-serif}
+    .creator-card--mariana .creator-traits{color:#97573f}
+    .creator-copy p:last-child{margin-bottom:0;color:#625471;font-size:.92rem;line-height:1.55}
+    @media(min-width:700px){.creator-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.creator-copy{padding:22px 22px 25px}}
+    .creator-photo{aspect-ratio:4/3;object-position:center 10%}
+    .creator-card--mariana .creator-photo{object-position:center 15%}
   </style>
 </head>
 <body>
@@ -70,12 +72,12 @@
     <div class="shell header-inner">
       <a class="brand" href="#inicio" aria-label="E agora, qual é o próximo passo? — início"><span class="brand-star" aria-hidden="true">✦</span><span>Próximo passo</span></a>
       <nav class="desktop-nav" aria-label="Navegação principal">
-        <a class="nav-link" href="#nivel">Meu próximo nível</a><a class="nav-link" href="#curriculo">Currículo</a><a class="nav-link" href="#linkedin">LinkedIn</a><a class="nav-link" href="#entrevista">Entrevista</a><a class="nav-link" href="#erros">Erros para evitar</a>
+        <a class="nav-link" href="#quem-somos">Quem somos</a><a class="nav-link" href="#nivel">Meu próximo nível</a><a class="nav-link" href="#curriculo">Currículo</a><a class="nav-link" href="#linkedin">LinkedIn</a><a class="nav-link" href="#entrevista">Entrevista</a><a class="nav-link" href="#erros">Erros para evitar</a>
       </nav>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">☰</button>
     </div>
     <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação móvel">
-      <a href="#nivel">🎯 Meu próximo nível</a><a href="#curriculo">📄 Currículo + IA (ATS)</a><a href="#linkedin">💼 LinkedIn</a><a href="#entrevista">🎤 Entrevista</a><a href="#erros">⚡ Erros para evitar</a>
+      <a href="#quem-somos">✨ Quem somos</a><a href="#nivel">🎯 Meu próximo nível</a><a href="#curriculo">📄 Currículo + IA (ATS)</a><a href="#linkedin">💼 LinkedIn</a><a href="#entrevista">🎤 Entrevista</a><a href="#erros">⚡ Erros para evitar</a>
     </nav>
   </header>
   <main>
@@ -98,6 +100,32 @@
       </div>
     </section>
 
+    <section class="section creators-section" id="quem-somos" aria-labelledby="creators-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Por trás do guia</span><h2 id="creators-title">Prazer, somos Andy e Mariana.</h2>
+          <p>Criamos este espaço para compartilhar informação, acolhimento e caminhos possíveis para o seu próximo passo.</p>
+        </div>
+        <div class="creator-grid">
+          <article class="creator-card creator-card--andy reveal">
+            <img class="creator-photo" src="assets/andy-retrato.jpg" alt="Retrato de Andy, com cabelos cacheados acobreados e camiseta escura" loading="lazy" decoding="async">
+            <div class="creator-copy">
+              <span class="creator-kicker">Psicologia · Marketing humanizado</span><h3>Andy</h3>
+              <p class="creator-traits">Games · Música · Conexões</p>
+              <p>Sou apaixonada por entender pessoas e transformar realidades. Música e games fazem parte das histórias que me inspiram.</p>
+            </div>
+          </article>
+          <article class="creator-card creator-card--mariana reveal">
+            <img class="creator-photo" src="assets/mariana-retrato.jpg" alt="Retrato de Mariana, com cabelos cacheados escuros, óculos e brincos de pérola" loading="lazy" decoding="async">
+            <div class="creator-copy">
+              <span class="creator-kicker">Estudante de Psicologia</span><h3>Mariana</h3>
+              <p class="creator-traits">Cultura pop · Livros · Música</p>
+              <p>Gosto de animes, desenhos, filmes, jogos, livros e praia. As histórias e os sentimentos que conectam as pessoas sempre me inspiram.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
     <section class="section" id="nivel">
       <div class="shell">
         <div class="section-heading reveal"><span class="eyebrow">01 · descubra seu rumo</span><h2>Seu próximo nível</h2><p>Qual é o seu objetivo atual? Escolha o que mais combina com o momento que você está vivendo.</p></div>
@@ -194,12 +222,11 @@
     const expandButton=document.querySelector('.expand-checklist');const extraChecks=document.querySelector('.extra-checks');expandButton.addEventListener('click',()=>{const expanded=expandButton.getAttribute('aria-expanded')==='true';expandButton.setAttribute('aria-expanded',String(!expanded));extraChecks.hidden=expanded;expandButton.textContent=expanded?'Ver checklist completo':'Mostrar menos itens'});
     const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
     document.querySelector('#next-step').addEventListener('click',()=>{document.querySelector('#encouragement').textContent='Que bom. Um passo pequeno já é um começo. Você consegue!'});    const starField=document.querySelector('.stars');
-    [...starField.children].forEach(star=>{const copy=star.cloneNode(true);copy.style.top=`${Math.max(0,(parseFloat(star.style.top)||0)-1.37)}%`;copy.style.animationDelay=`${(parseFloat(star.style.animationDelay)||0)-2.25}s`;starField.append(copy)});
+    const originalStars=[...starField.children];
+    for(let step=1;step<=3;step++){originalStars.forEach(star=>{const top=parseFloat(star.style.top)||0;const delay=parseFloat(star.style.animationDelay)||0;const copy=star.cloneNode(true);copy.style.top=String(Math.max(0,top-step*.68))+"%";copy.style.animationDelay=String(delay-step*1.15)+"s";starField.append(copy)})}
   </script>
 </body>
 </html>
-
-
 
 
 
